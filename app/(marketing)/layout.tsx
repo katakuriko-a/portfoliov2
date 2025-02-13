@@ -18,7 +18,7 @@ export default function MarketingLayout({
           <MainNav items={marketingConfig.mainNav} />
           <nav>
             <Link
-              href={"/>login"}
+              href={"/login"}
               className={cn(
                 buttonVariants({ variant: "secondary", size: "sm" }),
                 "px-4"
