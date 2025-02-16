@@ -1,8 +1,11 @@
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-export default function SiteFooter() {
+export default function SiteFooter({
+  className,
+}: React.HTMLAttributes<HTMLElement>) {
   return (
-    <footer>
+    <footer className={cn(className)}>
       <div className="container mx-auto py-10 md:py-0 md:h-20">
         <p className="text-center text-sm md:text-left">
           Build by {""}
