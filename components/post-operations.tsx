@@ -21,7 +21,7 @@ import {
 } from "./ui/alert-dialog";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-// import { toast } from "./ui/use-toast";
+import { toast } from "../hooks/use-toast";
 
 async function deletePost(postId: string) {
   try {
@@ -35,13 +35,13 @@ async function deletePost(postId: string) {
 
     return true;
   } catch (error) {
-    // toast({
-    //   title: "Something went wrong.",
-    //   description: "Your post was not deleted. Please try again.",
-    //   variant: "destructive",
-    // });
+    toast({
+      title: "問題が発生しました。",
+      description: "投稿の削除に失敗しました。再度お試しください。",
+      variant: "destructive",
+    });
 
-    return false; // エラーが発生した場合は false を返す
+    return false;
   }
 }
 
